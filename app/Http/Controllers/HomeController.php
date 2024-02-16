@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Car;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,10 @@ class HomeController extends Controller
 
     public function testHome()
     {
-        // Your logic for the testHome route
-        return view('testHome');
+        return view('testHome',compact('cars'));
+    }
+    public function login()
+    {
+        return view('admin.login');
     }
 }

@@ -14,7 +14,7 @@ use App\Http\Controllers\Controller;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('testHome');
 });
 Route::get('testHome', [Controller::class, 'home'])->name('testHome');
 Route::get('carsList', [Controller::class, 'listing'])->name('carsList');

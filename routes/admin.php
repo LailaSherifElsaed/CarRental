@@ -5,11 +5,14 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
 
 Route::prefix('admin')->middleware(['web', 'verified'])->group(function () {
+    Route::get('logIn', [HomeController::class, 'login'])->name('admin.logIn');  
+    //users
     Route::get('users', [UserController::class, 'index'])->name('admin.users');  // Add 'admin.' prefix
     Route::get('add_user', [UserController::class, 'create'])->name('admin.add_user');  // Add 'admin.' prefix
     Route::post('storeUser', [UserController::class, 'store'])->name('admin.storeUser');  // Add 'admin.' prefix
