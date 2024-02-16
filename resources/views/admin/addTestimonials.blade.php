@@ -78,32 +78,35 @@
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="name" required="required" class="form-control " name="Name">
-											</div>
-											@error('Name')
+												<input type="text" id="name" class="form-control " name="Name">
+												@error('Name')
 												{{ $message }}
-											@enderror
+												@enderror
+											</div>
+											
 										</div>
                                         <div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Position <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="position" required="required" class="form-control " name="position">
+												<input type="text" id="position" class="form-control " name="position">
+												@error('position')
+													{{ $message }}
+												@enderror
 											</div>
-											@error('position')
-												{{ $message }}
-											@enderror
+											
 										</div>
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="content">Content <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<textarea id="content" name="content" required="required" class="form-control" name="content">Contents</textarea>
-											</div>
-											@error('content')
-												{{ $message }}
-											@enderror
+												<textarea id="content" name="content"  class="form-control" name="content"></textarea>
+												@error('content')
+													{{ $message }}
+												@enderror
 										</div>
+											</div>
+											
 										
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align">Published</label>
@@ -117,11 +120,12 @@
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="image">Image <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="file" id="image" name="image" required="required" class="form-control" name="image">
+												<input type="file" id="image" name="image"  class="form-control" name="image">
+												@error('image')
+													{{ $message }}
+												@enderror
 											</div>
-											@error('image')
-												{{ $message }}
-											@enderror
+											
 										</div>
 										<div class="ln_solid"></div>
 										<div class="item form-group">
